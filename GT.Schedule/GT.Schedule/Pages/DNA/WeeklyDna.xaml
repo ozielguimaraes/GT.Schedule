@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GT.Schedule.Pages.DNA.WeeklyDna"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+             Title="DNA"
+             Style="{StaticResource PageStyle}">
+
+    <StackLayout>
+        <syncfusion:SfSchedule x:Name="schedule" ScheduleView ="WeekView">
+            <syncfusion:SfSchedule.ViewHeaderStyle>
+                <syncfusion:ViewHeaderStyle
+                    BackgroundColor="#009688" 
+                    DayTextColor="#FFFFFF" 
+                    DateTextColor="#FFFFFF" 
+                    DayTextStyle="Arial,15" 
+                    DateTextStyle="Arial,15">
+                </syncfusion:ViewHeaderStyle>
+            </syncfusion:SfSchedule.ViewHeaderStyle>
+            <syncfusion:SfSchedule.AppointmentStyle>
+                <syncfusion:AppointmentStyle 
+                        SelectionTextColor="#006064" 
+                        SelectionBorderColor="#005F63">
+                </syncfusion:AppointmentStyle>
+            </syncfusion:SfSchedule.AppointmentStyle>
+            <syncfusion:SfSchedule.AppointmentMapping>
+                <syncfusion:ScheduleAppointmentMapping
+                    SubjectMapping="EventName" 
+                    ColorMapping="Color"
+                    StartTimeMapping="From"
+                    EndTimeMapping="To">
+                </syncfusion:ScheduleAppointmentMapping>
+            </syncfusion:SfSchedule.AppointmentMapping>
+        </syncfusion:SfSchedule>
+
+    </StackLayout>
+</ContentPage>
